@@ -85,6 +85,7 @@ footer {
 
 .socail {
     display: flex;
+    justify-content: center;
 }
 
 .socail a {
