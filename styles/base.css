@@ -123,28 +123,25 @@ footer {
 
 main section {
     background-color: #fff;
-    margin: 15px 10px; /* Adjust margin to match your general layout */
-    padding: 15px; /* Add some padding inside the sections */
-    border-radius: 5px; /* Slightly rounded corners */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 15px 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
 
-/* Specific styling for the H2 within sections to match the image style */
 main section h2 {
-    background-color: #444; /* Darker background for section titles */
+    background-color: #444;
     color: white;
     padding: 8px 15px;
-    margin: -15px -15px 15px -15px; /* Negative margin to pull it to the edges of the section */
-    font-size: 1.2em;
+    margin: -15px -15px 15px -15px;
     text-align: left;
-    border-top-left-radius: 5px; /* Match section border radius */
+    border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
-/* About Me Section specific */
 .about-me-section p {
-    line-height: 1.6; /* Improve readability of text */
+    line-height: 1.6;
     color: #555;
 }
 
@@ -174,8 +171,8 @@ main section h2 {
 
 .course-filters {
     display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap */
-    gap: 8px; /* Space between buttons */
+    flex-wrap: wrap;
+    gap: 8px;
     margin-bottom: 15px;
 }
 
@@ -187,7 +184,7 @@ main section h2 {
     cursor: pointer;
     font-size: 0.9em;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-    flex-grow: 1; /* Allow buttons to grow and fill space on smaller screens */
+    flex-grow: 1;
     text-align: center;
 }
 
@@ -196,14 +193,14 @@ main section h2 {
 }
 
 .filter-button.active {
-    background-color: #e07a5f; /* Match your hover color or choose a new active color */
+    background-color: #e07a5f;
     color: white;
     border-color: #e07a5f;
 }
 
 .course-list {
     display: flex;
-    flex-direction: column; /* Stack courses vertically */
+    flex-direction: column;
     gap: 8px;
     margin-bottom: 15px;
 }
@@ -214,7 +211,7 @@ main section h2 {
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 0.95em;
-    color: #3d405b; /* Match your h1/a color */
+    color: #3d405b;
 }
 
 .total-credits {
@@ -224,7 +221,6 @@ main section h2 {
     margin-top: 10px;
 }
 
-/* Footer specific overrides/additions to ensure proper content */
 footer p {
-    margin: 5px 0; /* Adjust spacing for footer paragraphs */
+    margin: 5px 0;
 }
