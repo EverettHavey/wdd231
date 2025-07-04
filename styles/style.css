@@ -44,3 +44,34 @@ header span {
     content: "\00D7";
 
 }
+
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: #3d405b;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation a:hover {
+    background-color: #e07a5f;
+}
+
+.navigation li.current {
+    background-color: #eee;
+}
