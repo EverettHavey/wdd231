@@ -173,11 +173,6 @@ main section h2 {
     display: block; /* Remove extra space below image */
 }
 
-/* Web Certificate Courses Section */
-.web-certificate-section {
-    /* Already has general section styling from main section */
-}
-
 .course-filters {
     display: flex;
     flex-wrap: wrap; /* Allow buttons to wrap */
