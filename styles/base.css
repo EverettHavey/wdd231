@@ -153,24 +153,24 @@ main section h2 {
     text-align: center; /* Center the photo */
 }
 
-.photo-placeholder {
-    width: 180px; /* Fixed width for the photo container */
-    height: 180px; /* Fixed height for the photo container */
+.photo-container {
+    width: 180px;
+    height: 180px;
     background-color: #ddd;
     border: 1px solid #ccc;
-    margin: 10px auto 0 auto; /* Center the photo placeholder horizontally */
+    margin: 10px auto 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #666;
     font-size: 0.9em;
-    overflow: hidden; /* Ensure image fits within */
+    overflow: hidden;
 }
 
-.photo-placeholder img {
+.photo-container img {
     max-width: 100%;
     height: auto;
-    display: block; /* Remove extra space below image */
+    display: block;
 }
 
 .course-filters {
