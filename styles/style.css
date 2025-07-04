@@ -86,6 +86,7 @@ footer {
 .socail {
     display: flex;
     justify-content: center;
+    column-gap: 8px;
 }
 
 .socail a {
@@ -95,4 +96,9 @@ footer {
     width: 44px;
     height: 44px;
     border: red dashed 1px;
+}
+
+.socail img {
+    width: 22px;
+    height: 22px;
 }
