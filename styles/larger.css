@@ -24,3 +24,54 @@
 }
 }
 
+/**OTHER**/
+
+@media only screen and (min-width: 38rem) {
+    /* Existing rules for header, main, nav, footer should remain */
+    header, main, nav, footer {
+        max-width: 900px; /* Keep your existing max-width */
+        margin: 0 auto;
+    }
+
+    /* Arrange About Me and Student Photo sections side-by-side */
+    .home-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* About Me takes 2 parts, Photo takes 1 part */
+        gap: 20px; /* Space between the grid items (sections) */
+        /* Optionally align items if desired, e.g., align-items: start; */
+    }
+
+    /* Place specific sections into grid areas (optional, but good for complex layouts) */
+    .about-me-section {
+        grid-column: 1 / 2; /* Explicitly place in first column */
+    }
+
+    .student-photo-section {
+        grid-column: 2 / 3; /* Explicitly place in second column */
+    }
+
+    /* Web Certificate section should span all columns if using grid on main */
+    .web-certificate-section {
+        grid-column: 1 / -1; /* Spans from the first to the last column */
+    }
+
+    /* Reset margin for sections within the grid to rely on grid gap */
+    main section {
+        margin: 0; /* Remove individual section margins, let grid handle spacing */
+    }
+
+    /* Adjust main h1 margin as it's no longer inside a grid item directly */
+    main h1 {
+        grid-column: 1 / -1; /* Make H1 span full width above grid */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .filter-button {
+        flex-grow: 0; /* Buttons no longer grow, maintain their size */
+        /* Optionally set a min-width if they get too small without flex-grow */
+        min-width: 80px;
+    }
+}
+
+

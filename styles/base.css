@@ -117,3 +117,120 @@ footer {
 .socail a:hover {
     background-color: #ddd;
 }
+
+
+/**OTHER**/
+
+main section {
+    background-color: #fff;
+    margin: 15px 10px; /* Adjust margin to match your general layout */
+    padding: 15px; /* Add some padding inside the sections */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Specific styling for the H2 within sections to match the image style */
+main section h2 {
+    background-color: #444; /* Darker background for section titles */
+    color: white;
+    padding: 8px 15px;
+    margin: -15px -15px 15px -15px; /* Negative margin to pull it to the edges of the section */
+    font-size: 1.2em;
+    text-align: left;
+    border-top-left-radius: 5px; /* Match section border radius */
+    border-top-right-radius: 5px;
+}
+
+/* About Me Section specific */
+.about-me-section p {
+    line-height: 1.6; /* Improve readability of text */
+    color: #555;
+}
+
+/* Student Photo Section specific */
+.student-photo-section {
+    text-align: center; /* Center the photo */
+}
+
+.photo-placeholder {
+    width: 180px; /* Fixed width for the photo container */
+    height: 180px; /* Fixed height for the photo container */
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    margin: 10px auto 0 auto; /* Center the photo placeholder horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 0.9em;
+    overflow: hidden; /* Ensure image fits within */
+}
+
+.photo-placeholder img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below image */
+}
+
+/* Web Certificate Courses Section */
+.web-certificate-section {
+    /* Already has general section styling from main section */
+}
+
+.course-filters {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    gap: 8px; /* Space between buttons */
+    margin-bottom: 15px;
+}
+
+.filter-button {
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    flex-grow: 1; /* Allow buttons to grow and fill space on smaller screens */
+    text-align: center;
+}
+
+.filter-button:hover {
+    background-color: #ccc;
+}
+
+.filter-button.active {
+    background-color: #e07a5f; /* Match your hover color or choose a new active color */
+    color: white;
+    border-color: #e07a5f;
+}
+
+.course-list {
+    display: flex;
+    flex-direction: column; /* Stack courses vertically */
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.course-item {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    color: #3d405b; /* Match your h1/a color */
+}
+
+.total-credits {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Footer specific overrides/additions to ensure proper content */
+footer p {
+    margin: 5px 0; /* Adjust spacing for footer paragraphs */
+}
