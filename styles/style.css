@@ -75,3 +75,9 @@ header span {
 .navigation li.current {
     background-color: #eee;
 }
+
+/**FOOTER**/
+footer {
+    background-color: #eee;
+    padding: 1rem 10px;
+}
