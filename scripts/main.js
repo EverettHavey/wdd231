@@ -1,22 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Select all filter buttons and all course items
     const filterButtons = document.querySelectorAll('.filter-button');
     const courseItems = document.querySelectorAll('.course-item');
 
+    // Add event listeners to each filter button
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove 'active' class from all buttons
+            // Remove 'active' class from all buttons to reset visual state
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add 'active' class to the clicked button
+            // Add 'active' class to the currently clicked button
             button.classList.add('active');
 
-            const filterCategory = button.dataset.filter; // Get the filter from data-filter attribute
+            // Get the filter category from the clicked button's data-filter attribute
+            const filterCategory = button.dataset.filter;
 
+            // Iterate over each course item to show/hide based on the filter
             courseItems.forEach(item => {
-                const itemCategory = item.dataset.category; // Get the category from data-category attribute
+                // Get the course item's category from its data-category attribute
+                const itemCategory = item.dataset.category;
 
-                // If the filter is 'all' OR the item's category matches the filter category, show the item
+                // Logic to show or hide the course item
+                // If the filter is 'all' OR the item's category matches the selected filter, show it
                 if (filterCategory === 'all' || itemCategory === filterCategory) {
-                    item.style.display = 'block'; // Show the item
+                    item.style.display = 'block'; // Make the item visible
                 } else {
                     item.style.display = 'none'; // Hide the item
                 }
@@ -24,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Optional: Trigger the 'All' filter on page load to ensure all courses are visible initially.
-    // This makes sure the page loads with all courses displayed by default.
+    // This block ensures that all courses are displayed when the page first loads.
+    // It simulates a click on the 'All' button.
     const allButton = document.querySelector('.filter-button[data-filter="all"]');
     if (allButton) {
-        allButton.click(); // Simulate a click on the 'All' button
+        allButton.click();
     }
 });
