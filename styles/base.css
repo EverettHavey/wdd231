@@ -9,6 +9,10 @@ h1 {
     color: #3d405b;
 }
 
+h2 {
+    color: #30405b;
+}
+
 header {
     display: grid;
     grid-template-columns: 24px auto 44px;
