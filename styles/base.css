@@ -148,9 +148,8 @@ main section h2 {
     color: #555;
 }
 
-/* Student Photo Section specific */
 .student-photo-section {
-    text-align: center; /* Center the photo */
+    text-align: center;
 }
 
 .photo-container {
