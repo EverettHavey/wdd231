@@ -1,0 +1,298 @@
+
+* {
+    font-family: "josefin Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 1rem 10px;
+    color: #3d405b;
+}
+
+h2 {
+    margin: 1rem 10px;
+    color: #30405b;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border: solid 1px #ddd;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #30405b;
+}
+
+/**Hamburger**/
+
+.hamburger {
+    background: none;
+    border: none;
+    color: #30405b;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::after {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger.show::after {
+    content: "\00D7";
+
+}
+
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: #3d405b;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation a:hover {
+    background-color: #e07a5f;
+}
+
+.navigation li.current {
+    background-color: #eee;
+}
+
+/**FOOTER**/
+footer {
+    background-color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.socail {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.socail a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: #ccc solid 1px;
+    border-radius: 22px;
+}
+
+.socail img {
+    width: 22px;
+    height: 22px;
+}
+
+.socail a:hover {
+    background-color: #ddd;
+}
+
+
+/**OTHER**/
+
+main section {
+    background-color: #fff;
+    margin: 15px 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+main section h2 {
+    background-color: #444;
+    color: white;
+    padding: 8px 15px;
+    margin: -15px -15px 15px -15px;
+    text-align: left;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.about-me-section p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.student-photo-section {
+    text-align: center;
+}
+
+.photo-container {
+    width: 180px;
+    height: 180px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    margin: 10px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 0.9em;
+    overflow: hidden;
+}
+
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.course-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.filter-button {
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.filter-button:hover {
+    background-color: #ccc;
+}
+
+.filter-button.active {
+    background-color: #e07a5f;
+    color: white;
+    border-color: #e07a5f;
+}
+
+.course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.course-item {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    color: #3d405b;
+}
+
+.total-credits {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/** Larger **/
+
+
+@media only screen  and (min-width: 38rem) {
+    
+    header, main, nav, footer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    header {
+        grid-template-columns: 24px auto;
+    }
+.hamburger {
+    display: none;
+
+}
+
+.navigation {
+    display: block;
+    border-bottom: solid 1px #eee;
+}
+.navigation ul {
+    display: flex;
+}
+.navigation a {
+    border: none;
+}
+}
+
+/**OTHER**/
+
+@media only screen and (min-width: 38rem) {
+
+    header, main, nav, footer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .home-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px; 
+    }
+
+    .about-me-section {
+        grid-column: 1 / 2;
+    }
+
+    .student-photo-section {
+        grid-column: 2 / 3;
+    }
+
+    .web-certificate-section {
+        grid-column: 1 / -1;
+    }
+
+    main section {
+        margin: 0;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .filter-button {
+        flex-grow: 0;
+        min-width: 80px;
+    }
+}
