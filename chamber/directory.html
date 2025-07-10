@@ -1,86 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--BASIC-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD231 | Everett Havey</title>
-    <meta name="description" content="WDD231 | Everett Havey">
+    <title>Chamber of Commerce | Directory</title>
+    <meta name="description" content="Explore the directory of members of the [Your Chamber Name] Chamber of Commerce. Find local businesses and organizations.">
     <meta name="author" content="Everett Havey">
 
-    <!--CSS Style Sheets-->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:description" content="Explore the directory of members of the [Your Chamber Name] Chamber of Commerce. Find local businesses and organizations.">
+    <meta property="og:image" content="https://yourwebsite.com/images/chamber-logo-social.jpg"> <meta property="og:url" content="https://yourwebsite.com/directory.html"> <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="styles/style.css">
-
-    <link rel="icon" href="...">
-
-    <meta property="og:title" content="My Homepage">
-    <meta property="og:image" content="...">
-    <meta property="og:description" content="">
-
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles/directory.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="images/home.svg" alt="site logo" width="1" height="1">
-        <span>Chamber</span>
-        <button id="ham-btn" class="hamburger"></button>
-    </header>
+        <img src="images/home.svg" alt="site logo" width="50" height="50"> <span>Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger">&#9776;</button> </header>
 
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li class="current"><a href="#">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">Final</a></li>
-        </ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="directory.html">Directory</a></li>
+            <li><a href="chamber.html">Chamber</a></li> <li><a href="final.html">Final</a></li> </ul>
     </nav>
 
-    <main class="home-grid">
-        <h1>Home</h1>
-        
-        <section class="about-me-section">
-            <h2>About Me</h2>
-            <p>Hello, I'm Everett. I like to swim, play Roblox and I also like coding games on Roblox Studio. I have been working with lua which is used on Roblox Studio since 2021. I also started with Web Designs in March 2025 and it has given me a new skill while doing BYU Pathways.</p>
-        </section>
-
-        <section class="student-photo-section">
-            <h2>Student Photo</h2>
-            <div class="photo-container">
-                <img src="images/newpfpme.jpg" alt="EverettPhoto" width="180" height="180">
+    <main class="directory-grid">
+        <h1>Chamber Members Directory</h1>
+        <div class="view-toggle">
+            <button id="grid-view-btn" class="active">Grid View</button>
+            <button id="list-view-btn">List View</button>
+        </div>
+        <div id="member-display" class="member-grid">
             </div>
-        </section>
-
-        <section class="web-certificate-section">
-            <h2>Web Certificates</h2>
-            <div class="course-filters">
-                <button class="filter-button active" data-filter="all">All</button>
-                <button class="filter-button" data-filter="cse">CSE</button>
-                <button class="filter-button" data-filter="wdd">WDD</button>
-            </div>
-            <div class="course-list">
-                <div class="course-item" data-category="wdd">WDD 130</div>
-                <div class="course-item" data-category="wdd">WDD 131</div>
-                <div class="course-item" data-category="wdd">WDD 231</div>
-                <div class="course-item" data-category="cse">CSE 110</div>
-                <div class="course-item" data-category="cse">CSE 111</div>
-                </div>
-            <p class="total-courses-info">Total Courses: <span id="courseCount"></span></p>
-        </section>
     </main>
 
     <footer>
-        <div class="socail">
-            <a href="https://www.facebook.com/everett.everett.5437" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
-            <a href="https://www.linkedin.com/in/everett-havey-679128313/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
-            <a href="https://github.com/EverettHavey/" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+        <div class="social">
+            <a href="https://www.facebook.com/everett.everett.5437" target="_blank"><img src="images/facebook.svg" alt="facebook" width="24" height="24"></a>
+            <a href="https://www.linkedin.com/in/everett-havey-679128313/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="24" height="24"></a>
+            <a href="https://github.com/EverettHavey/" target="_blank"><img src="images/github.svg" alt="github" width="24" height="24"></a>
         </div>
-        <p>&copy; <span id="currentyear"></span> Everett</p>
+        <p>&copy; <span id="currentyear"></span> Everett Havey</p>
+        <p>WDD 231</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
     <script src="scripts/navigation.js"></script>
     <script src="scripts/date.js"></script>
-    <script src="scripts/main.js"></script>
-</body>
+    <script src="scripts/directory.js"></script> </body>
 </html>
