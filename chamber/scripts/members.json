@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Local Bistro & Cafe",
+        "address": "123 Main Street, Anytown, USA 12345",
+        "phone": "(123) 456-7890",
+        "website": "https://www.localbistro.com",
+        "image": "bistro-logo.webp",
+        "membership_level": 3,
+        "other_info": "Your go-to spot for breakfast, lunch, and dinner. Locally sourced ingredients."
+    },
+    {
+        "name": "Green Thumb Landscaping",
+        "address": "456 Oak Avenue, Anytown, USA 12345",
+        "phone": "(123) 555-1234",
+        "website": "https://www.greenthumb.com",
+        "image": "greenthumb-logo.webp",
+        "membership_level": 2,
+        "other_info": "Providing beautiful outdoor spaces since 2005. Free consultations."
+    },
+    {
+        "name": "Tech Solutions Inc.",
+        "address": "789 Tech Park Rd, Anytown, USA 12345",
+        "phone": "(123) 789-0123",
+        "website": "https://www.techsolutions.com",
+        "image": "techsolutions-logo.webp",
+        "membership_level": 3,
+        "other_info": "Leading the way in innovative software development and IT support."
+    },
+    {
+        "name": "Fashion Forward Boutique",
+        "address": "101 Elm Street, Anytown, USA 12345",
+        "phone": "(123) 222-3333",
+        "website": "https://www.fashionforward.com",
+        "image": "fashion-logo.webp",
+        "membership_level": 1,
+        "other_info": "Trendy clothing and accessories for all ages. New arrivals weekly!"
+    },
+    {
+        "name": "Community Credit Union",
+        "address": "202 Bank Place, Anytown, USA 12345",
+        "phone": "(123) 987-6543",
+        "website": "https://www.communitycu.org",
+        "image": "creditunion-logo.webp",
+        "membership_level": 3,
+        "other_info": "Your local partner for financial growth and community support."
+    },
+    {
+        "name": "Peak Performance Gym",
+        "address": "303 Fitness Blvd, Anytown, USA 12345",
+        "phone": "(123) 111-2222",
+        "website": "https://www.peakgym.com",
+        "image": "peakgym-logo.webp",
+        "membership_level": 2,
+        "other_info": "State-of-the-art facilities and certified trainers to help you reach your goals."
+    },
+    {
+        "name": "The Daily Grind Coffee Shop",
+        "address": "404 Cafe Lane, Anytown, USA 12345",
+        "phone": "(123) 888-7777",
+        "website": "https://www.dailygrind.com",
+        "image": "dailygrind-logo.webp",
+        "membership_level": 1,
+        "other_info": "Freshly brewed coffee, pastries, and a cozy atmosphere."
+    },
+    {
+        "name": "Maple Syrup Producers Guild",
+        "address": "505 Forest Road, Anytown, USA 12345",
+        "phone": "(123) 333-4444",
+        "website": "https://www.mapleguild.com",
+        "image": "mapleguild-logo.webp",
+        "membership_level": 2,
+        "other_info": "Promoting sustainable maple syrup production and local products."
+    }
+]
