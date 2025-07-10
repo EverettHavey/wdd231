@@ -1,6 +1,31 @@
-// scripts/directory.js
+// scripts/script.js
 
-const membersURL = 'data/members.json'; // Path to your JSON data
+// --- Hamburger Menu Logic ---
+const hamBtn = document.getElementById('ham-btn');
+const navBar = document.getElementById('nav-bar');
+
+hamBtn.addEventListener('click', () => {
+    navBar.classList.toggle('show');
+    hamBtn.classList.toggle('show');
+});
+
+// --- Date Display Logic ---
+// Get the current year
+const currentYear = new Date().getFullYear();
+const currentYearSpan = document.getElementById('currentyear');
+if (currentYearSpan) {
+    currentYearSpan.textContent = currentYear;
+}
+
+// Get the last modification date of the document
+const lastModified = document.lastModified;
+const lastModifiedSpan = document.getElementById('lastModified');
+if (lastModifiedSpan) {
+    lastModifiedSpan.textContent = lastModified;
+}
+
+// --- Directory Members Logic ---
+const membersURL = 'scripts/members.json'; // *** Adjusted path to members.json ***
 const memberDisplay = document.getElementById('member-display');
 const gridViewBtn = document.getElementById('grid-view-btn');
 const listViewBtn = document.getElementById('list-view-btn');
@@ -48,12 +73,15 @@ function displayMembers(members, viewType) {
                 membershipText = 'Unknown Level';
         }
 
+        // Check if image path is defined before creating img tag
+        const imageHtml = member.image ? `<img src="images/${member.image}" alt="${member.name} Logo" loading="lazy">` : '';
+
         card.innerHTML = `
             <h3>${member.name}</h3>
             <p><strong>Address:</strong> ${member.address}</p>
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website.replace(/(^\w+:|^)\/\//, '')}</a></p>
-            <img src="images/${member.image}" alt="${member.name} Logo" loading="lazy">
+            ${imageHtml}
             <p class="membership-level"><strong>Level:</strong> ${membershipText}</p>
             ${member.other_info ? `<p class="other-info">${member.other_info}</p>` : ''}
         `;
@@ -62,20 +90,30 @@ function displayMembers(members, viewType) {
 }
 
 // Event Listeners for view toggle buttons
-gridViewBtn.addEventListener('click', () => {
-    displayMembers(allMembersData, 'grid'); // Use the cached data
-    gridViewBtn.classList.add('active');
-    listViewBtn.classList.remove('active');
-});
+// Check if buttons exist before adding listeners (important if this script is used on other pages)
+if (gridViewBtn && listViewBtn) {
+    gridViewBtn.addEventListener('click', () => {
+        displayMembers(allMembersData, 'grid'); // Use the cached data
+        gridViewBtn.classList.add('active');
+        listViewBtn.classList.remove('active');
+    });
 
-listViewBtn.addEventListener('click', () => {
-    displayMembers(allMembersData, 'list'); // Use the cached data
-    listViewBtn.classList.add('active');
-    gridViewBtn.classList.remove('active');
-});
+    listViewBtn.addEventListener('click', () => {
+        displayMembers(allMembersData, 'list'); // Use the cached data
+        listViewBtn.classList.add('active');
+        gridViewBtn.classList.remove('active');
+    });
+}
 
-// Initial call to load members when the page loads
+
+// Initial calls when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-    getMembersData(); // This is the call that fetches the data initially
-    // The displayMembers function within getMembersData will set the initial view and active button
+    // Only attempt to fetch members if the display element exists (i.e., on directory.html)
+    if (memberDisplay) {
+        getMembersData();
+        // Set initial active state for grid button only if buttons exist
+        if (gridViewBtn) {
+             gridViewBtn.classList.add('active');
+        }
+    }
 });
