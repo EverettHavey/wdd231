@@ -1,21 +1,21 @@
 [
     {
-        "name": "Local Bistro & Cafe",
+        "name": "Fresh Fries",
         "address": "123 Main Street, Anytown, USA 12345",
         "phone": "(123) 456-7890",
-        "website": "https://www.localbistro.com",
-        "image": "bistro-logo.webp",
+        "website": "https://www.FreshFries.com",
+        "image": "FreshFries-logo.webp",
         "membership_level": 3,
-        "other_info": "Your go-to spot for breakfast, lunch, and dinner. Locally sourced ingredients."
+        "other_info": "Your go-to spot for the best hamburger. Locally sourced ingredients."
     },
     {
-        "name": "Green Thumb Landscaping",
+        "name": "Splashy Dashiez",
         "address": "456 Oak Avenue, Anytown, USA 12345",
         "phone": "(123) 555-1234",
-        "website": "https://www.greenthumb.com",
-        "image": "greenthumb-logo.webp",
+        "website": "https://www.SplashyDashiez.com",
+        "image": "splashydashiez-logo.webp",
         "membership_level": 2,
-        "other_info": "Providing beautiful outdoor spaces since 2005. Free consultations."
+        "other_info": "Washing cars every day."
     },
     {
         "name": "Tech Solutions Inc.",
