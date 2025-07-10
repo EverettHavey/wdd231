@@ -12,27 +12,32 @@
 
     <meta property="og:title" content="Chamber of Commerce Directory">
     <meta property="og:description" content="Explore the directory of members of the [Your Chamber Name] Chamber of Commerce. Find local businesses and organizations.">
-    <meta property="og:image" content="https://yourwebsite.com/images/chamber-logo-social.jpg"> <meta property="og:url" content="https://yourwebsite.com/directory.html"> <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourwebsite.com/images/chamber-logo-social.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/directory.html">
+    <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/reset.css"> <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/directory.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
+    </head>
 <body>
     <header>
-        <img src="images/home.svg" alt="site logo" width="50" height="50"> <span>Chamber of Commerce</span>
-        <button id="ham-btn" class="hamburger">&#9776;</button> </header>
+        <img src="images/home.svg" alt="site logo" width="50" height="50"> 
+        <span>Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger">&#9776;</button> 
+    </header>
 
     <nav id="nav-bar" class="navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li class="current"><a href="directory.html">Directory</a></li>
-            <li><a href="chamber.html">Chamber</a></li> <li><a href="final.html">Final</a></li> </ul>
+            <li><a href="chamber.html">Chamber</a></li> 
+            <li><a href="final.html">Final</a></li> 
+        </ul>
     </nav>
 
-    <main class="directory-grid">
-        <h1>Chamber Members Directory</h1>
+    <main class="directory-main-content"> <h1>Chamber Members Directory</h1>
         <div class="view-toggle">
             <button id="grid-view-btn" class="active">Grid View</button>
             <button id="list-view-btn">List View</button>
@@ -51,6 +56,7 @@
         <p>WDD 231</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
-    <script src="scripts/members.json"></script>
-    <script src="scripts/script.js"></script>
+
+    <script src="scripts/script.js"></script> 
+</body>
 </html>
