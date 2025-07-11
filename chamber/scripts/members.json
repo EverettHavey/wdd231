@@ -1,64 +1,64 @@
 [
     {
+        "image": "Buisness-logo.webp",
         "name": "Buisness Name",
         "address": "N/A",
         "phone": "N/A",
         "website": "https://www.WebsiteName.com",
-        "image": "Buisness-logo.webp",
         "membership_level": 1,
         "other_info": "Basic comment"
     },
     {
+        "image": "Buisness-logo.webp",
         "name": "Buisness Name",
         "address": "N/A",
         "phone": "N/A",
         "website": "https://www.WebsiteName.com",
-        "image": "Buisness-logo.webp",
         "membership_level": 1,
         "other_info": "Basic comment"
     },
     {
+        "image": "Buisness-logo.webp",
         "name": "Buisness Name",
         "address": "N/A",
         "phone": "N/A",
         "website": "https://www.WebsiteName.com",
-        "image": "Buisness-logo.webp",
         "membership_level": 2,
         "other_info": "Basic comment"
     },
     {
+        "image": "Buisness-logo.webp",
         "name": "Buisness Name",
         "address": "N/A",
         "phone": "N/A",
         "website": "https://www.WebsiteName.com",
-        "image": "Buisness-logo.webp",
         "membership_level": 2,
         "other_info": "Basic comment"
     },
     {
+        "image": "Buisness-logo.webp",
         "name": "Buisness Name",
         "address": "N/A",
         "phone": "N/A",
         "website": "https://www.WebsiteName.com",
-        "image": "Buisness-logo.webp",
-        "membership_level": 2,
-        "other_info": "Basic comment"
-    },
-    {
-        "name": "Buisness Name",
-        "address": "N/A",
-        "phone": "N/A",
-        "website": "https://www.WebsiteName.com",
-        "image": "Buisness-logo.webp",
         "membership_level": 3,
         "other_info": "Basic comment"
     },
     {
+        "image": "Buisness-logo.webp",
         "name": "Buisness Name",
         "address": "N/A",
         "phone": "N/A",
         "website": "https://www.WebsiteName.com",
+        "membership_level": 3,
+        "other_info": "Basic comment"
+    },
+    {
         "image": "Buisness-logo.webp",
+        "name": "Buisness Name",
+        "address": "N/A",
+        "phone": "N/A",
+        "website": "https://www.WebsiteName.com",
         "membership_level": 3,
         "other_info": "Basic comment"
     }
