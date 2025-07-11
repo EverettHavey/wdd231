@@ -1,6 +1,6 @@
 
 * {
-    font-family: "Josefin Sans", sans-serif; /* Corrected font name */
+    font-family: "Josefin Sans", sans-serif; 
     box-sizing: border-box;
 }
 
@@ -92,13 +92,13 @@ footer {
     text-align: center;
 }
 
-.social { /* Corrected class name from .socail to .social */
+.social { 
     display: flex;
     justify-content: center;
     column-gap: 8px;
 }
 
-.social a { /* Corrected class name from .socail to .social */
+.social a { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,12 +108,12 @@ footer {
     border-radius: 22px;
 }
 
-.social img { /* Corrected class name from .socail to .social */
+.social img {
     width: 22px;
     height: 22px;
 }
 
-.social a:hover { /* Corrected class name from .socail to .social */
+.social a:hover {
     background-color: #ddd;
 }
 
@@ -213,7 +213,7 @@ main section h2 {
     color: #3d405b;
 }
 
-.total-courses-info { /* Corrected class name */
+.total-courses-info {
     text-align: center;
     font-size: 0.9em;
     color: #666;
@@ -223,8 +223,6 @@ main section h2 {
 footer p {
     margin: 5px 0;
 }
-
-/* --- Directory Page Specific Styles --- */
 
 .view-toggle {
     display: flex;
@@ -255,12 +253,11 @@ footer p {
     border-color: #30405b;
 }
 
-/* Grid View for Members */
 .member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 20px;
-    margin: 15px 10px; /* Adjust margin as needed */
+    margin: 15px 10px;
 }
 
 .member-card {
@@ -272,7 +269,7 @@ footer p {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Pushes content and logo apart */
+    justify-content: space-between; 
     align-items: center;
 }
 
@@ -298,16 +295,17 @@ footer p {
 }
 
 .member-card img {
-    max-width: 120px; /* Adjust logo size */
+    max-width: 120px;
     height: auto;
-    margin-top: 15px; /* Space between text and logo */
+    margin-top: 15px; 
     border: 1px solid #eee;
     padding: 5px;
     border-radius: 5px;
     background-color: #f0f0f0;
 }
 
-/* List View for Members */
+/** LIST FOR VIEW OF MEMBERS **/
+
 .member-list {
     display: flex;
     flex-direction: column;
@@ -315,33 +313,32 @@ footer p {
     margin: 15px 10px;
 }
 
-.member-list .member-card { /* Reusing member-card styles for consistency */
-    flex-direction: row; /* Align items in a row */
+.member-list .member-card {
+    flex-direction: row;
     text-align: left;
     padding: 15px;
-    box-shadow: none; /* Remove shadow for a flatter list look */
-    border: 1px solid #eee; /* Lighter border for list items */
-    align-items: center; /* Vertically align content */
-    gap: 20px; /* Space between logo and text */
+    box-shadow: none; 
+    border: 1px solid #eee; 
+    align-items: center; 
+    gap: 20px; 
 }
 
 .member-list .member-card h3 {
-    margin-bottom: 5px; /* Less margin in list view */
+    margin-bottom: 5px; 
 }
 
 .member-list .member-card img {
-    max-width: 80px; /* Smaller logo in list view */
-    margin: 0; /* Remove top margin */
-    flex-shrink: 0; /* Prevent image from shrinking */
+    max-width: 80px;
+    margin: 0; 
+    flex-shrink: 0;
 }
 
-/* Hide some elements in list view if desired (e.g., membership level) */
 .member-list .member-card .membership-level {
     display: none;
 }
 
 
-/** Larger **/
+/** LARGER SCREENS **/
 
 
 @media only screen and (min-width: 38rem) {
@@ -372,7 +369,7 @@ footer p {
         border: none;
     }
 
-    .home-grid { /* Applies to index.html main */
+    .home-grid { 
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 20px; 
@@ -405,14 +402,13 @@ footer p {
         min-width: 80px;
     }
 
-    /* Directory specific media queries */
-    .directory-grid { /* Targeting the directory page's main content */
-        grid-template-columns: 1fr; /* Default to single column for directory on larger screens, adjust if you want a different layout for the whole page */
+    .directory-grid { 
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
 
     .member-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* More columns on larger screens */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     }
 
     .member-list .member-card {
