@@ -1,7 +1,11 @@
-
 * {
     font-family: "Josefin Sans", sans-serif; 
     box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f1de; 
+    color: #555;
 }
 
 h1 {
@@ -21,6 +25,7 @@ header {
     align-items: end;
     border: solid 1px #ddd;
     column-gap: 8px;
+    background-color: #fff;
 }
 
 header img {
@@ -35,28 +40,33 @@ header span {
     color: #30405b;
 }
 
-/**Hamburger**/
-
 .hamburger {
     background: none;
     border: none;
     color: #30405b;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    padding: 0;
+    line-height: 1;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hamburger::after {
     content: "\2630";
-    font-size: 2rem;
 }
 
 .hamburger.show::after {
     content: "\00D7";
 }
 
-
 .navigation {
     display: none;
+    background-color: #fff;
 }
 
 .navigation.show {
@@ -75,27 +85,35 @@ header span {
     color: #3d405b;
     text-decoration: none;
     border-bottom: solid 1px #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navigation a:hover {
     background-color: #e07a5f;
+    color: #333;
 }
 
 .navigation li.current {
-    background-color: #eee;
+    background-color: #e0e0e0;
 }
 
-/**FOOTER**/
 footer {
     background-color: #eee;
     padding: 1rem 10px;
     text-align: center;
+    color: #555;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #555;
 }
 
 .social { 
     display: flex;
     justify-content: center;
     column-gap: 8px;
+    margin-bottom: 10px;
 }
 
 .social a { 
@@ -106,6 +124,7 @@ footer {
     height: 44px;
     border: #ccc solid 1px;
     border-radius: 22px;
+    transition: background-color 0.3s ease;
 }
 
 .social img {
@@ -116,9 +135,6 @@ footer {
 .social a:hover {
     background-color: #ddd;
 }
-
-
-/**OTHER**/
 
 main section {
     background-color: #fff;
@@ -157,7 +173,7 @@ main section h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #666;
+    color: #333;
     font-size: 0.9em;
     overflow: hidden;
 }
@@ -185,6 +201,7 @@ main section h2 {
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     flex-grow: 1;
     text-align: center;
+    color: #3d405b;
 }
 
 .filter-button:hover {
@@ -193,7 +210,7 @@ main section h2 {
 
 .filter-button.active {
     background-color: #e07a5f;
-    color: white;
+    color: #333;
     border-color: #e07a5f;
 }
 
@@ -205,7 +222,7 @@ main section h2 {
 }
 
 .course-item {
-    background-color: #eee;
+    background-color: #e0e0e0;
     border: 1px solid #ccc;
     padding: 10px 15px;
     border-radius: 5px;
@@ -216,12 +233,8 @@ main section h2 {
 .total-courses-info {
     text-align: center;
     font-size: 0.9em;
-    color: #666;
+    color: #333;
     margin-top: 10px;
-}
-
-footer p {
-    margin: 5px 0;
 }
 
 .view-toggle {
@@ -244,7 +257,7 @@ footer p {
 
 .view-toggle button:hover {
     background-color: #e07a5f;
-    color: white;
+    color: #333;
 }
 
 .view-toggle button.active {
@@ -271,6 +284,11 @@ footer p {
     flex-direction: column;
     justify-content: space-between; 
     align-items: center;
+    transition: transform 0.2s ease; 
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
 }
 
 .member-card h3 {
@@ -286,8 +304,9 @@ footer p {
 }
 
 .member-card a {
-    color: #e07a5f;
+    color: #333;
     text-decoration: none;
+    word-break: break-word;
 }
 
 .member-card a:hover {
@@ -304,8 +323,6 @@ footer p {
     background-color: #f0f0f0;
 }
 
-/** LIST FOR VIEW OF MEMBERS **/
-
 .member-list {
     display: flex;
     flex-direction: column;
@@ -321,6 +338,7 @@ footer p {
     border: 1px solid #eee; 
     align-items: center; 
     gap: 20px; 
+    background-color: #fff;
 }
 
 .member-list .member-card h3 {
@@ -337,12 +355,7 @@ footer p {
     display: none;
 }
 
-
-/** LARGER SCREENS **/
-
-
 @media only screen and (min-width: 38rem) {
-    
     header, main, nav, footer {
         max-width: 900px;
         margin: 0 auto;
@@ -359,6 +372,7 @@ footer p {
     .navigation {
         display: block;
         border-bottom: solid 1px #eee;
+        background-color: #fff;
     }
 
     .navigation ul {
@@ -400,11 +414,6 @@ footer p {
     .filter-button {
         flex-grow: 0;
         min-width: 80px;
-    }
-
-    .directory-grid { 
-        grid-template-columns: 1fr; 
-        gap: 20px;
     }
 
     .member-grid {
