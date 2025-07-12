@@ -1,19 +1,19 @@
 [
     {
-        "image": "Buisness-logo.webp",
-        "name": "Buisness Name",
-        "address": "N/A",
-        "phone": "N/A",
-        "website": "https://www.WebsiteName.com",
+        "image": "images/BorrowItForward.webp",
+        "name": "Borrow It Forward",
+        "address": "47 W 13th St, New York, NY 10011, USA",
+        "phone": "(916) 892-1223",
+        "website": "https://www.BorrowItForward.com",
         "membership_level": 1,
         "other_info": "Basic comment"
     },
     {
-        "image": "Buisness-logo.webp",
-        "name": "Buisness Name",
+        "image": "images/TMJLogo.png",
+        "name": "The Mysterious Japan",
         "address": "N/A",
         "phone": "N/A",
-        "website": "https://www.WebsiteName.com",
+        "website": "https://www.themysteriousjapan.com/",
         "membership_level": 1,
         "other_info": "Basic comment"
     },
