@@ -19,7 +19,8 @@ if (lastModifiedSpan) {
 }
 
 const membersURL = 'scripts/members.json';
-const memberDisplay = document.getElementById('member-display');
+// Ensure 'member-display' ID exists in your directory.html
+const memberDisplay = document.getElementById('member-display'); 
 const gridViewBtn = document.getElementById('grid-view-btn');
 const listViewBtn = document.getElementById('list-view-btn');
 
@@ -32,16 +33,26 @@ async function getMembersData() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         allMembersData = await response.json();
-        displayMembers(allMembersData, 'grid');
+        // Initial display when data is loaded
+        displayMembers(allMembersData, 'grid'); 
     } catch (error) {
         console.error("Could not fetch members:", error);
-        memberDisplay.innerHTML = '<p>Error loading member data. Please try again later.</p>';
+        // Only try to update memberDisplay if it exists
+        if (memberDisplay) { 
+            memberDisplay.innerHTML = '<p>Error loading member data. Please try again later.</p>';
+        }
     }
 }
 
 function displayMembers(members, viewType) {
+    // Only proceed if memberDisplay element is found
+    if (!memberDisplay) {
+        console.error("Error: 'member-display' element not found in HTML.");
+        return; 
+    }
+
     memberDisplay.innerHTML = '';
-    memberDisplay.className = '';
+    memberDisplay.className = ''; // Clear existing classes
     memberDisplay.classList.add(viewType === 'grid' ? 'member-grid' : 'member-list');
 
     members.forEach(member => {
@@ -63,14 +74,14 @@ function displayMembers(members, viewType) {
                 membershipText = 'Unknown Level';
         }
 
-        const imageHtml = member.image ? `<img src="images/${member.image}" alt="${member.name} Logo" loading="lazy">` : '';
+        // CORRECTED IMAGE PATH: member.image already includes 'images/'
+        const imageHtml = member.image ? `<img src="${member.image}" alt="${member.name} Logo" loading="lazy">` : '';
 
         card.innerHTML = `
             <h3>${member.name}</h3>
-            <p><strong>Address:</strong> ${member.address}</p>
+            ${imageHtml} <p><strong>Address:</strong> ${member.address}</p>
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website.replace(/(^\w+:|^)\/\//, '')}</a></p>
-            ${imageHtml}
             <p class="membership-level"><strong>Level:</strong> ${membershipText}</p>
             ${member.other_info ? `<p class="other-info">${member.other_info}</p>` : ''}
         `;
@@ -78,6 +89,7 @@ function displayMembers(members, viewType) {
     });
 }
 
+// Add event listeners for view buttons only if they exist
 if (gridViewBtn && listViewBtn) {
     gridViewBtn.addEventListener('click', () => {
         displayMembers(allMembersData, 'grid');
@@ -95,74 +107,11 @@ if (gridViewBtn && listViewBtn) {
 document.addEventListener('DOMContentLoaded', () => {
     if (memberDisplay) {
         getMembersData();
+
         if (gridViewBtn) {
-             gridViewBtn.classList.add('active');
+            gridViewBtn.classList.add('active');
         }
+    } else {
+        console.error("Error: 'member-display' element not found. Cannot load members.");
     }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const membersContainer = document.getElementById('directory-content'); 
-
-    const jsonFilePath = 'scripts/members.json'; 
-
-    fetch(jsonFilePath)
-        .then(response => {
-            if (!response.ok) {
-
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json(); 
-        })
-        .then(members => {
-
-            members.forEach(member => {
-
-                const memberCard = document.createElement('div');
-                memberCard.classList.add('member-card');
-
-                const memberImage = document.createElement('img');
-
-                memberImage.src = member.image; 
-                memberImage.alt = member.name + ' Logo';
-                memberImage.loading = 'lazy';
-
-                const memberName = document.createElement('h2');
-                memberName.textContent = member.name;
-
-                const memberAddress = document.createElement('p');
-                memberAddress.textContent = `Address: ${member.address}`;
-
-                const memberPhone = document.createElement('p');
-                memberPhone.textContent = `Phone: ${member.phone}`;
-
-                const memberWebsite = document.createElement('a');
-                memberWebsite.href = member.website;
-                memberWebsite.textContent = 'Visit Website';
-                memberWebsite.target = '_blank';
-
-                const memberLevel = document.createElement('p');
-                memberLevel.textContent = `Membership Level: ${member.membership_level}`;
-
-                const memberInfo = document.createElement('p');
-                memberInfo.textContent = `Other Info: ${member.other_info}`;
-
-                memberCard.appendChild(memberImage);
-                memberCard.appendChild(memberName);
-                memberCard.appendChild(memberAddress);
-                memberCard.appendChild(memberPhone);
-                memberCard.appendChild(memberWebsite);
-                memberCard.appendChild(memberLevel);
-                memberCard.appendChild(memberInfo);
-
-
-                membersContainer.appendChild(memberCard);
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching or parsing members.json:', error);
-            if (membersContainer) {
-                membersContainer.innerHTML = '<p>Failed to load member directory. Please try again later.</p>';
-            }
-        });
 });
