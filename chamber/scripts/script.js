@@ -100,3 +100,69 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const membersContainer = document.getElementById('directory-content'); 
+
+    const jsonFilePath = 'scripts/members.json'; 
+
+    fetch(jsonFilePath)
+        .then(response => {
+            if (!response.ok) {
+
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json(); 
+        })
+        .then(members => {
+
+            members.forEach(member => {
+
+                const memberCard = document.createElement('div');
+                memberCard.classList.add('member-card');
+
+                const memberImage = document.createElement('img');
+
+                memberImage.src = member.image; 
+                memberImage.alt = member.name + ' Logo';
+                memberImage.loading = 'lazy';
+
+                const memberName = document.createElement('h2');
+                memberName.textContent = member.name;
+
+                const memberAddress = document.createElement('p');
+                memberAddress.textContent = `Address: ${member.address}`;
+
+                const memberPhone = document.createElement('p');
+                memberPhone.textContent = `Phone: ${member.phone}`;
+
+                const memberWebsite = document.createElement('a');
+                memberWebsite.href = member.website;
+                memberWebsite.textContent = 'Visit Website';
+                memberWebsite.target = '_blank';
+
+                const memberLevel = document.createElement('p');
+                memberLevel.textContent = `Membership Level: ${member.membership_level}`;
+
+                const memberInfo = document.createElement('p');
+                memberInfo.textContent = `Other Info: ${member.other_info}`;
+
+                memberCard.appendChild(memberImage);
+                memberCard.appendChild(memberName);
+                memberCard.appendChild(memberAddress);
+                memberCard.appendChild(memberPhone);
+                memberCard.appendChild(memberWebsite);
+                memberCard.appendChild(memberLevel);
+                memberCard.appendChild(memberInfo);
+
+
+                membersContainer.appendChild(memberCard);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching or parsing members.json:', error);
+            if (membersContainer) {
+                membersContainer.innerHTML = '<p>Failed to load member directory. Please try again later.</p>';
+            }
+        });
+});
