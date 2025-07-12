@@ -19,7 +19,7 @@ if (lastModifiedSpan) {
 }
 
 const membersURL = 'scripts/members.json';
-// Ensure 'member-display' ID exists in your directory.html
+
 const memberDisplay = document.getElementById('member-display'); 
 const gridViewBtn = document.getElementById('grid-view-btn');
 const listViewBtn = document.getElementById('list-view-btn');
@@ -33,11 +33,11 @@ async function getMembersData() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         allMembersData = await response.json();
-        // Initial display when data is loaded
+
         displayMembers(allMembersData, 'grid'); 
     } catch (error) {
         console.error("Could not fetch members:", error);
-        // Only try to update memberDisplay if it exists
+
         if (memberDisplay) { 
             memberDisplay.innerHTML = '<p>Error loading member data. Please try again later.</p>';
         }
@@ -45,14 +45,14 @@ async function getMembersData() {
 }
 
 function displayMembers(members, viewType) {
-    // Only proceed if memberDisplay element is found
+
     if (!memberDisplay) {
         console.error("Error: 'member-display' element not found in HTML.");
         return; 
     }
 
     memberDisplay.innerHTML = '';
-    memberDisplay.className = ''; // Clear existing classes
+    memberDisplay.className = ''; 
     memberDisplay.classList.add(viewType === 'grid' ? 'member-grid' : 'member-list');
 
     members.forEach(member => {
@@ -74,7 +74,6 @@ function displayMembers(members, viewType) {
                 membershipText = 'Unknown Level';
         }
 
-        // CORRECTED IMAGE PATH: member.image already includes 'images/'
         const imageHtml = member.image ? `<img src="${member.image}" alt="${member.name} Logo" loading="lazy">` : '';
 
         card.innerHTML = `
@@ -89,7 +88,6 @@ function displayMembers(members, viewType) {
     });
 }
 
-// Add event listeners for view buttons only if they exist
 if (gridViewBtn && listViewBtn) {
     gridViewBtn.addEventListener('click', () => {
         displayMembers(allMembersData, 'grid');
