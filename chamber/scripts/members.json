@@ -1,14 +1,5 @@
 [
     {
-        "image": "images/BorrowItForward.webp",
-        "name": "Borrow It Forward",
-        "address": "47 W 13th St, New York, NY 10011, USA",
-        "phone": "(916)-892-1223",
-        "website": "https://www.BorrowItForward.com",
-        "membership_level": 1,
-        "other_info": "Basic comment"
-    },
-    {
         "image": "images/TMJLogo.png",
         "name": "The Mysterious Japan",
         "address": "N/A",
@@ -23,7 +14,7 @@
         "address": "N/A",
         "phone": "N/A",
         "website": "https://www.japan-employment.com/",
-        "membership_level": 2,
+        "membership_level": 1,
         "other_info": "Basic comment"
     },
     {
@@ -41,7 +32,7 @@
         "address": "N/A",
         "phone": "N/A",
         "website": "https://www.EmberglowStudios.com",
-        "membership_level": 3,
+        "membership_level": 2,
         "other_info": "Basic comment"
     },
     {
@@ -50,7 +41,7 @@
         "address": "123 Nostalgia Lane, Classic City, CA 90210, United States",
         "phone": "(916)-738-7639",
         "website": "https://www.RetroOlicsExpress.com",
-        "membership_level": 3,
+        "membership_level": 2,
         "other_info": "Basic comment"
     },
     {
@@ -60,6 +51,24 @@
         "phone": "N/A",
         "website": "https://www.SplashyDashiez.com",
         "membership_level": 3,
+        "other_info": "Basic comment"
+    },
+    {
+        "image": "images/BorrowItForward.webp",
+        "name": "Borrow It Forward",
+        "address": "47 W 13th St, New York, NY 10011, USA",
+        "phone": "(916)-892-1223",
+        "website": "https://www.BorrowItForward.com",
+        "membership_level": 3,
+        "other_info": "Basic comment"
+    },
+    {
+        "image": "images/BorrowItForward.webp",
+        "name": "Borrow It Forward",
+        "address": "",
+        "phone": "",
+        "website": "https://www.BorrowItForward.com",
+        "membership_level": 1,
         "other_info": "Basic comment"
     }
 ]
