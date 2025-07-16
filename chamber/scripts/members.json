@@ -4,7 +4,7 @@
         "name": "The Mysterious Japan",
         "address": "N/A",
         "phone": "N/A",
-        "website": "https://www.themysteriousjapan.com/",
+        "website": "https://www.themysteriousjapan.com",
         "membership_level": 1,
         "other_info": "Basic comment"
     },
@@ -13,7 +13,7 @@
         "name": "Japan Employment Solutions",
         "address": "N/A",
         "phone": "N/A",
-        "website": "https://www.japan-employment.com/",
+        "website": "https://www.japan-employment.com",
         "membership_level": 1,
         "other_info": "Basic comment"
     },
