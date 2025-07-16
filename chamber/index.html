@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce | Directory</title>
+    <meta name="description" content="Explore the directory of members of the [Your Chamber Name] Chamber of Commerce. Find local businesses and organizations.">
+    <meta name="author" content="Everett Havey">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:description" content="Explore the directory of members of the [Your Chamber Name] Chamber of Commerce. Find local businesses and organizations.">
+    <meta property="og:image" content="https://everetthavey.github.io/wdd231/chamber-logo-home.svg">
+    <meta property="og:url" content="https://everetthavey.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/home.svg" alt="Chamber of Commerce logo" width="50" height="50"> 
+        <span>Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu">&#9776;</button> 
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li class="current"><a href="directory.html">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main class="directory-main-content"> 
+        <h1>Chamber Members Directory</h1>
+        <div class="view-toggle">
+            <button id="grid-view-btn" class="active">Grid View</button>
+            <button id="list-view-btn">List View</button>
+        </div>
+        <div id="member-display" class="member-grid">
+        </div>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com/everett.everett.5437" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook icon" width="24" height="24"></a>
+            <a href="https://www.linkedin.com/in/everett-havey-679128313/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn icon" width="24" height="24"></a>
+            <a href="https://github.com/EverettHavey/" target="_blank" aria-label="GitHub"><img src="images/github.svg" alt="GitHub icon" width="24" height="24"></a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> Everett Havey</p>
+        <p>WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/script.js"></script> 
+</body>
+</html>
