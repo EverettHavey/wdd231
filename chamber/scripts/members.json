@@ -23,7 +23,7 @@
         "address": "N/A",
         "phone": "N/A",
         "website": "https://www.HaveyHotels.com",
-        "membership_level": 2,
+        "membership_level": 1,
         "other_info": "Basic comment"
     },
     {
@@ -50,7 +50,7 @@
         "address": "N/A",
         "phone": "N/A",
         "website": "https://www.SplashyDashiez.com",
-        "membership_level": 3,
+        "membership_level": 2,
         "other_info": "Basic comment"
     },
     {
@@ -68,6 +68,15 @@
         "address": "N/A",
         "phone": "N/A",
         "website": "https://www.BentSpoonSculptures.com",
+        "membership_level": 3,
+        "other_info": "Basic comment"
+    }
+    {
+        "image": "images/",
+        "name": "HireSwimmer",
+        "address": "N/A",
+        "phone": "N/A",
+        "website": "https://www.HireSwimmers.com",
         "membership_level": 3,
         "other_info": "Basic comment"
     }
