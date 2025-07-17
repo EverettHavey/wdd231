@@ -36,20 +36,20 @@
         "other_info": "Basic comment"
     },
     {
-        "image": "images/Splashlogo.webp",
-        "name": "Splashy Dashiez",
-        "address": "N/A",
-        "phone": "N/A",
-        "website": "https://www.SplashyDashiez.com",
-        "membership_level": 1,
-        "other_info": "Basic comment"
-    },
-    {
         "image": "images/RetroOlics.webp",
         "name": "RetroOlics Express",
         "address": "123 Nostalgia Lane, Classic City, CA 90210, United States",
         "phone": "(916)-738-7639",
         "website": "https://www.RetroOlicsExpress.com",
+        "membership_level": 2,
+        "other_info": "Basic comment"
+    },
+    {
+        "image": "images/Splashlogo.webp",
+        "name": "Splashy Dashiez",
+        "address": "N/A",
+        "phone": "N/A",
+        "website": "https://www.SplashyDashiez.com",
         "membership_level": 2,
         "other_info": "Basic comment"
     },
