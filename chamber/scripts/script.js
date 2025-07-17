@@ -23,7 +23,7 @@ if (lastModifiedSpan) {
     lastModifiedSpan.textContent = lastModified;
 }
 
-const weatherApiKey = 'YOUR_API_KEY';
+const weatherApiKey = 'ae210c2f1df036d2a70a689e0174b825';
 const city = 'Minato City';
 const countryCode = 'JP';
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&units=metric&appid=${weatherApiKey}`;
