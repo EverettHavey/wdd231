@@ -115,6 +115,8 @@ function displayForecast(data) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', getWeatherData);
+
 const membersURL = 'scripts/members.json';
 
 const memberDisplay = document.getElementById('member-display'); 
