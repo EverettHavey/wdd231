@@ -1,0 +1,26 @@
+
+:root {
+  --hue: 223;
+  --sat: 10%;
+  --gray50: hsl(var(--hue), var(--sat), 95%);
+  --gray950: hsl(var(--hue), var(--sat), 5%);
+  --red300: hsl(358, 78%, 79%);
+  --red400: hsl(358, 78%, 69%);
+  --red500: hsl(358, 78%, 49%);
+  --trans-dur: 0.3s;
+  color-scheme: light dark;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+}
+
+.pl__brick--red {
+  --brick-left: var(--red400);
+  --brick-top: var(--red300);
+  fill: var(--red500);
+}
+
+.pl__brick-group {
+  animation: brick-bounce 6s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+.pl__brick-group--1 {
+  animation-name: brick-move-1;
+}
