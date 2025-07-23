@@ -55,7 +55,7 @@ const courses = [
         subject: "WDD",
         number: 130,
         title: "Web Fundamentals",
-        credits: 3,
+        credits: 2,
         description: "An introductory course to web development, covering HTML, CSS, and basic JavaScript.",
         certificate: "Web Foundations",
         technology: ["HTML5", "CSS3", "JavaScript"]
@@ -64,7 +64,7 @@ const courses = [
         subject: "WDD",
         number: 131,
         title: "Programming with JavaScript",
-        credits: 3,
+        credits: 2,
         description: "This course focuses on advanced JavaScript concepts, DOM manipulation, and event handling.",
         certificate: "Web Development",
         technology: ["JavaScript", "DOM", "APIs"]
@@ -73,7 +73,7 @@ const courses = [
         subject: "WDD",
         number: 231,
         title: "Front-End Web Development",
-        credits: 3,
+        credits: 2,
         description: "Build interactive and responsive user interfaces using modern front-end frameworks and tools.",
         certificate: "Front-End Developer",
         technology: ["React", "Vue", "Angular", "Responsive Design"]
@@ -82,7 +82,7 @@ const courses = [
         subject: "CSE",
         number: 110,
         title: "Introduction to Programming",
-        credits: 3,
+        credits: 2,
         description: "Learn the fundamentals of programming using a high-level language.",
         certificate: "Programming Basics",
         technology: ["Python", "Algorithms", "Data Structures"]
@@ -91,7 +91,7 @@ const courses = [
         subject: "CSE",
         number: 111,
         title: "Programming with Functions",
-        credits: 3,
+        credits: 2,
         description: "Delve deeper into programming concepts, focusing on functions, modules, and error handling.",
         certificate: "Advanced Programming",
         technology: ["Python", "Functions", "Modules"]
