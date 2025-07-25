@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minato City Chamber of Commerce | Home</title>
-    <meta name="description" content="Welcome to the Minato City Chamber of Commerce. Supporting local businesses and community growth in Minato City, Tokyo, Japan.">
+    <title>Minato City Chamber of Commerce | Join Us</title>
+    <meta name="description" content="Join the Minato City Chamber of Commerce. Apply for membership and support local business growth.">
     <meta name="author" content="Everett Havey">
 
     <link rel="icon" href="images/favicon.ico">
 
-    <meta property="og:title" content="Minato City Chamber of Commerce Home">
-    <meta property="og:description" content="Welcome to the Minato City Chamber of Commerce. Supporting local businesses and community growth in Minato City, Tokyo, Japan.">
-    <meta property="og:image" content="https://everetthavey.github.io/wdd231/chamber/images/chamber-logo-home.svg"> 
-    <meta property="og:url" content="https://everetthavey.github.io/wdd231/chamber/index.html">
+    <meta property="og:title" content="Minato City Chamber of Commerce Join Us">
+    <meta property="og:description" content="Join the Minato City Chamber of Commerce. Apply for membership and support local business growth.">
+    <meta property="og:image" content="https://everetthavey.github.io/wdd231/chamber/images/chamber-logo-join.svg"> 
+    <meta property="og:url" content="https://everetthavey.github.io/wdd231/chamber/join.html">
     <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="styles/style.css">
@@ -29,15 +29,90 @@
 
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
+            <li class="current"><a href="join.html">Join</a></li>
             <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
 
-    <main class="join-content"> 
-        
+    <main class="join-main-content"> 
+        <h1>Join the Minato City Chamber of Commerce</h1>
+        <p>Fill out the form below to apply for membership. We look forward to welcoming you!</p>
+
+        <form method="get" action="thankyou.html" class="membership-form">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label class="top">First Name*
+                    <input type="text" id="fname" name="fname" title="First Name" required autocomplete="given-name">
+                </label>
+                <label class="top">Last Name*
+                    <input type="text" id="lname" name="lname" title="Last Name" required autocomplete="family-name">
+                </label>
+                <label class="top">Organizational Title
+                    <input type="text" id="org-title" name="org_title" title="Your Organizational Title (min. 7 alpha characters, hyphens, spaces)" autocomplete="organization-title" pattern="^[a-zA-Z\s-]{7,}$">
+                </label>
+                <label class="top">Email*
+                    <input type="email" id="email" name="email" title="Your Email Address" required autocomplete="email" placeholder="example@gmail.com">
+                </label>
+                <label class="top">Mobile Phone Number*
+                    <input type="tel" id="phone" name="phone" title="Your Mobile Phone Number" required autocomplete="tel" placeholder="916-456-7890">
+                </label>
+                <label class="top">Business/Organization Name*
+                    <input type="text" id="bizname" name="bizname" title="Your Business or Organization Name" required autocomplete="organization">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Membership Level</legend>
+                <p>Choose your desired membership level:</p>
+                <label class="sbs"><input type="radio" name="membership_level" value="np" required> NP (Non-Profit)</label>
+                <p class="membership-desc">No Fee. Access to basic networking events and resources.</p>
+                
+                <label class="sbs"><input type="radio" name="membership_level" value="bronze"> Bronze Membership</label>
+                <p class="membership-desc">$50/year. Includes basic networking events, business listing in directory.</p>
+                
+                <label class="sbs"><input type="radio" name="membership_level" value="silver"> Silver Membership</label>
+                <p class="membership-desc">$100/year. All Bronze benefits, plus priority event registration, small ad space.</p>
+                
+                <label class="sbs"><input type="radio" name="membership_level" value="gold"> Gold Membership</label>
+                <p class="membership-desc">$200/year. All Silver benefits, plus premium ad space, mentorship programs, exclusive workshops.</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>About Your Business</legend>
+                <label class="top">Business Description (max 500 characters)
+                    <textarea id="biz-description" name="business_description" title="Description of your business or organization" rows="5" maxlength="500"></textarea>
+                </label>
+            </fieldset>
+
+            <input type="hidden" id="submission-timestamp" name="submission_timestamp">
+            
+            <input type="submit" value="Apply for Membership" class="submitBtn">
+        </form>
+
+        <section class="membership-cards-container">
+            <div class="membership-card anim-delay-0">
+                <h3>NP Membership</h3>
+                <p>No Fee</p>
+                <a href="#modal-np" class="modal-trigger">Learn More</a>
+            </div>
+            <div class="membership-card anim-delay-1">
+                <h3>Bronze Membership</h3>
+                <p>$50/year</p>
+                <a href="#modal-bronze" class="modal-trigger">Learn More</a>
+            </div>
+            <div class="membership-card anim-delay-2">
+                <h3>Silver Membership</h3>
+                <p>$100/year</p>
+                <a href="#modal-silver" class="modal-trigger">Learn More</a>
+            </div>
+            <div class="membership-card anim-delay-3">
+                <h3>Gold Membership</h3>
+                <p>$200/year</p>
+                <a href="#modal-gold" class="modal-trigger">Learn More</a>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -51,6 +126,61 @@
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 
+    <div id="modal-np" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>Listing in the online Chamber Directory</li>
+                <li>Access to basic networking events and webinars</li>
+                <li>Monthly Chamber newsletter</li>
+                <li>Participation in community initiatives</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-bronze" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>All NP Membership benefits</li>
+                <li>Basic business profile in the Chamber Directory</li>
+                <li>Discounted rates for Chamber-sponsored events</li>
+                <li>Eligibility for Chamber awards</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-silver" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>All Bronze Membership benefits</li>
+                <li>Priority registration for popular events</li>
+                <li>Small ad space in the monthly newsletter (rotating)</li>
+                <li>Invitations to exclusive member-only workshops</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-gold" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver Membership benefits</li>
+                <li>Premium ad space in newsletter & website (rotating)</li>
+                <li>Access to Chamber mentorship programs</li>
+                <li>Eligibility for "Member Spotlight" feature on homepage</li>
+                <li>VIP access to select Chamber events</li>
+                <li>Direct advocacy support for your business needs</li>
+            </ul>
+        </div>
+    </div>
+
     <script src="scripts/script.js"></script> 
+    <script src="scripts/join.js"></script>
 </body>
 </html>
