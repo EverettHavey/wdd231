@@ -35,38 +35,38 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const dataDisplay = document.getElementById('submitted-data');
-            
-            dataDisplay.innerHTML = ''; 
+    const dataDisplay = document.getElementById('submitted-data');
+    if (dataDisplay) {
+        const params = new URLSearchParams(window.location.search);
+        
+        dataDisplay.innerHTML = ''; 
 
-            const fieldsToDisplay = {
-                'fname': 'First Name',
-                'lname': 'Last Name',
-                'email': 'Email',
-                'phone': 'Phone Number',
-                'bizname': 'Business Name',
-                'submission_timestamp': 'Submission Date/Time'
-            };
+        const fieldsToDisplay = {
+            'fname': 'First Name',
+            'lname': 'Last Name',
+            'email': 'Email',
+            'phone': 'Phone Number',
+            'bizname': 'Business Name',
+            'submission_timestamp': 'Submission Date/Time'
+        };
 
-            for (const [paramName, displayName] of Object.entries(fieldsToDisplay)) {
-                if (params.has(paramName)) {
-                    let value = params.get(paramName);
-                    if (paramName === 'submission_timestamp') {
-                        const date = new Date(value);
-                        value = date.toLocaleString('en-US', {
-                            year: 'numeric', month: 'long', day: 'numeric',
-                            hour: '2-digit', minute: '2-digit', second: '2-digit'
-                        });
-                    }
-                    dataDisplay.innerHTML += `<p><strong>${displayName}:</strong> ${decodeURIComponent(value)}</p>`;
+        for (const [paramName, displayName] of Object.entries(fieldsToDisplay)) {
+            if (params.has(paramName)) {
+                let value = params.get(paramName);
+                if (paramName === 'submission_timestamp') {
+                    const date = new Date(value);
+                    value = date.toLocaleString('en-US', {
+                        year: 'numeric', month: 'long', day: 'numeric',
+                        hour: '2-digit', minute: '2-digit', second: '2-digit'
+                    });
                 }
+                dataDisplay.innerHTML += `<p><strong>${displayName}:</strong> ${decodeURIComponent(value)}</p>`;
             }
+        }
 
-            if (dataDisplay.innerHTML === '') {
-                dataDisplay.innerHTML = '<p>No data submitted or data could not be retrieved.</p>';
-            }
-        });
+        if (dataDisplay.innerHTML === '') {
+            dataDisplay.innerHTML = '<p>No data submitted or data could not be retrieved.</p>';
+        }
+    }
+});
