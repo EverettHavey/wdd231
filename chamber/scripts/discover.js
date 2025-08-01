@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchAttractions = async () => {
         try {
-            const response = await fetch('data/discover-data.json');
+            const response = await fetch('scripts/discover-data.json');
             const data = await response.json();
             data.attractions.forEach(attraction => {
                 const card = createCard(attraction);
