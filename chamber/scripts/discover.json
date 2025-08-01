@@ -1,0 +1,52 @@
+{
+  "attractions": [
+    {
+      "name": "Local History Museum",
+      "address": "123 Museum St, Townsville, State",
+      "description": "Step back in time and explore the rich history of our community through fascinating exhibits and artifacts.",
+      "image": "images/museum.webp"
+    },
+    {
+      "name": "Community Art Gallery",
+      "address": "456 Gallery Ave, Townsville, State",
+      "description": "Featuring works from local artists, this gallery showcases the vibrant and diverse creative talent in our area.",
+      "image": "images/artgallery.webp"
+    },
+    {
+      "name": "Riverfront Park",
+      "address": "789 Park Blvd, Townsville, State",
+      "description": "A beautiful green space perfect for picnics, walking, and enjoying views of the river. Features a playground and walking trails.",
+      "image": "images/park.webp"
+    },
+    {
+      "name": "Townsville Opera House",
+      "address": "101 Theater Rd, Townsville, State",
+      "description": "Catch a show at this historic venue. The Opera House hosts a variety of plays, concerts, and community events.",
+      "image": "images/operahouse.webp"
+    },
+    {
+      "name": "Farmers Market",
+      "address": "202 Market Square, Townsville, State",
+      "description": "Open every Saturday, the market offers fresh, locally grown produce, handmade goods, and delicious food vendors.",
+      "image": "images/market.webp"
+    },
+    {
+      "name": "Botanical Gardens",
+      "address": "303 Garden Ln, Townsville, State",
+      "description": "Wander through diverse plant collections and tranquil landscapes. A peaceful retreat for nature lovers.",
+      "image": "images/gardens.webp"
+    },
+    {
+      "name": "Children's Science Center",
+      "address": "404 Discovery Way, Townsville, State",
+      "description": "An interactive learning center where kids can explore science concepts through hands-on exhibits and experiments.",
+      "image": "images/sciencecenter.webp"
+    },
+    {
+      "name": "Historic Lighthouse",
+      "address": "505 Beacon Point, Townsville, State",
+      "description": "Overlooking the coast, this historic lighthouse offers breathtaking views and a glimpse into our maritime past.",
+      "image": "images/lighthouse.webp"
+    }
+  ]
+}

@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce | Directory</title>
-    <meta name="description" content="Explore the directory of members of the [Your Chamber Name] Chamber of Commerce. Find local businesses and organizations.">
+    <title>Chamber of Commerce | Discover</title>
+    <meta name="description" content="Discover interesting places and attractions in the area served by the [Your Chamber Name] Chamber of Commerce.">
     <meta name="author" content="Everett Havey">
 
     <link rel="icon" href="images/favicon.ico">
 
-    <meta property="og:title" content="Chamber of Commerce Directory">
-    <meta property="og:description" content="Explore the directory of members of the [Your Chamber Name] Chamber of Commerce. Find local businesses and organizations.">
+    <meta property="og:title" content="Chamber of Commerce Discover Page">
+    <meta property="og:description" content="Discover interesting places and attractions in the area served by the [Your Chamber Name] Chamber of Commerce.">
     <meta property="og:image" content="https://everetthavey.github.io/wdd231/chamber-logo-home.svg">
-    <meta property="og:url" content="https://everetthavey.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://everetthavey.github.io/wdd231/chamber/discover.html">
     <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="styles/style.css">
@@ -30,15 +30,16 @@
     <nav id="nav-bar" class="navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="directory.html">Directory</a></li>
+            <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
-            <li><a href="discover.html">Discover</a></li>
+            <li class="current"><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
 
     <main class=""> 
-        <h1>Chamber Members Discover</h1>
-        
+        <h1>Discover Local Attractions</h1>
+        <div id="visitor-message"></div>
+        <div id="discover-grid"></div>
     </main>
 
     <footer>
@@ -52,6 +53,7 @@
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 
-    <script src="scripts/script.js"></script> 
+    <script src="scripts/discover.js"></script> 
+    <script src="scripts/discover.json"></script>
 </body>
 </html>
