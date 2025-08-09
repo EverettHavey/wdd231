@@ -9,25 +9,7 @@ function validateForm() {
 
 
 
-fetch('scripts/profile.json')
-  .then(response => response.json())
-  .then(data => {
-    const trainerGrid = document.querySelector('.featured-trainers');
-    data.trainers.forEach(trainer => {
-      const trainerCard = document.createElement('div');
-      trainerCard.className = 'trainer-card';
-      trainerCard.innerHTML = `
-        <img src="${trainer.image_url}" alt="${trainer.name} profile photo">
-        <h4>${trainer.name}</h4>
-        <p>${trainer.specialty}</p>
-        <a href="#">View Profile</a>
-      `;
-      trainerGrid.appendChild(trainerCard);
-    });
-  })
-  .catch(error => console.error('Error fetching data:', error));
-
-  function showProfile(trainerId) {
+function showProfile(trainerId) {
     const modal = document.getElementById('profileModal');
     const trainerBio = document.getElementById('trainerBio');
 
@@ -36,7 +18,6 @@ fetch('scripts/profile.json')
         .then(data => {
             const trainer = data.trainers.find(t => t.id === trainerId);
             if (trainer) {
-
                 trainerBio.innerHTML = `
                     <img src="${trainer.image_url}" alt="${trainer.name} profile photo" class="profile-image">
                     <h3>${trainer.name}</h3>
@@ -47,7 +28,6 @@ fetch('scripts/profile.json')
                     <p><strong>Rates:</strong> $${trainer.rates.per_session} per session</p>
                     <a href="#" class="cta-button">Contact ${trainer.name}</a>
                 `;
-
                 modal.style.display = "block";
             } else {
                 trainerBio.innerHTML = '<h3>Trainer not found.</h3>';
