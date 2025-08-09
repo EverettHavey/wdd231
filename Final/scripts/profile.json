@@ -15,6 +15,20 @@
       "image_url": "images/trainer-1.jpg"
     },
     {
+      "id": "trainer001",
+      "name": "Johnny Urban",
+      "specialty": "Strength and Conditioning",
+      "location": "Sacramento, CA",
+      "experience_years": 8,
+      "certifications": ["CPT", "NASM"],
+      "bio": "Johnny is a certified personal trainer with a passion for helping clients build strength and confidence. She specializes in creating personalized workout plans.",
+      "rates": {
+        "per_session": 35,
+        "per_month": 400
+      },
+      "image_url": "images/trainer-1.jpg"
+    },
+    {
       "id": "trainer002",
       "name": "John Smith",
       "specialty": "Yoga and Flexibility",
