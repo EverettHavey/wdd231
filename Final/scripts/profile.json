@@ -12,7 +12,7 @@
         "per_session": 50,
         "per_month": 400
       },
-      "image_url": "images/trainer-1.jpg"
+      "image_url": "images/JaneDoe.webp"
     },
     {
       "id": "trainer003",
@@ -26,7 +26,7 @@
         "per_session": 35,
         "per_month": 400
       },
-      "image_url": "images/trainer-1.jpg"
+      "image_url": "images/JohnnyUrban.webp"
     },
     {
       "id": "trainer004",
@@ -40,7 +40,7 @@
         "per_session": 35,
         "per_month": 400
       },
-      "image_url": "images/trainer-1.jpg"
+      "image_url": "images/GregTelmon.webp"
     },
     {
       "id": "trainer002",
@@ -54,7 +54,7 @@
         "per_session": 45,
         "per_month": 350
       },
-      "image_url": "images/trainer-2.jpg"
+      "image_url": "images/JohnSmith"
     }
   ]
 }
