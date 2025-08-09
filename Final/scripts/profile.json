@@ -19,7 +19,7 @@
       "name": "Johnny Urban",
       "specialty": "Strength and Conditioning",
       "location": "Sacramento, CA",
-      "experience_years": 8,
+      "experience_years": 15,
       "certifications": ["CPT", "NASM"],
       "bio": "Johnny is a certified personal trainer with a passion for helping clients build strength and confidence. She specializes in creating personalized workout plans.",
       "rates": {
@@ -33,7 +33,7 @@
       "name": "Greg Telmon",
       "specialty": "Strength and Conditioning",
       "location": "Los Angelos, CA",
-      "experience_years": 8,
+      "experience_years": 6,
       "certifications": ["CPT", "NASM"],
       "bio": "Greg is a certified personal trainer with a passion for helping clients build strength and confidence. She specializes in creating personalized workout plans.",
       "rates": {
