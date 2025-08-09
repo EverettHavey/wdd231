@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    color: #8be1d4;
+    border-bottom: 2px solid #8be1d4;
+}
+
+main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-section {
+    text-align: center;
+    background-size: cover;
+    color: #fff;
+    padding: 5em 2em;
+    border-radius: 8px;
+    margin-bottom: 2em;
+    background-image: url('../images/hero-bg.jpg');
+}
+
+.hero-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.cta-button {
+    background: #8be1d4;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background: #50c4b4;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

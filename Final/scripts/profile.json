@@ -1,0 +1,40 @@
+{
+  "trainers": [
+    {
+      "id": "trainer001",
+      "name": "Jane Doe",
+      "specialty": "Strength and Conditioning",
+      "location": "London, UK",
+      "experience_years": 8,
+      "certifications": ["CPT", "NASM"],
+      "bio": "Jane is a certified personal trainer with a passion for helping clients build strength and confidence. She specializes in creating personalized workout plans.",
+      "rates": {
+        "per_session": 50,
+        "per_month": 400
+      },
+      "image_url": "images/trainer-1.jpg"
+    },
+    {
+      "id": "trainer002",
+      "name": "John Smith",
+      "specialty": "Yoga and Flexibility",
+      "location": "Manchester, UK",
+      "experience_years": 10,
+      "certifications": ["RYT 500"],
+      "bio": "John's focus is on holistic wellness, combining yoga with mindful meditation to improve physical and mental flexibility.",
+      "rates": {
+        "per_session": 45,
+        "per_month": 350
+      },
+      "image_url": "images/trainer-2.jpg"
+    }
+  ],
+  "staff": [
+    {
+      "id": "staff001",
+      "name": "Alex Johnson",
+      "role": "Founder & CEO",
+      "bio": "Alex founded HireFitness with a vision to make professional fitness guidance accessible to everyone."
+    }
+  ]
+}
